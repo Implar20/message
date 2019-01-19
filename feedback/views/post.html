@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/CSS/bootstrap.css">
+    <title>Document</title>
+    <style>
+        #link {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-header">
+            <a href="/index" id="link">留言板</a>
+            <small>说出你的故事</small>
+        </h1>
+        <form action="/comment" method="get">
+            <div class="form-group">
+                <label for="name" class="control-label">昵称</label>
+                <div>
+                    <input type="text" class="form-control" id="name" name="name" required minlength="2" placeholder="昵称">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="text" class=" control-label">留言</label>
+                <div>
+                   <textarea class="form-control" id="text" name="message"cols="30" rows="10" required minlength="5" maxlength="20" placeholder="请输入留言"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-danger">发表</button>
+        </form>
+    </div>
+</body>
+</html>
